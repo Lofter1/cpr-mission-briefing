@@ -49,7 +49,6 @@ body {
   animation: 0.5s ease-in 0s 1 openScale;
   padding: 2.5rem 2.5rem 4.5rem 2.5rem;
   color: var(--pallet4);
-  max-width: 500px;
   
   --aug-border: initial;
   --aug-border-all: 0.125rem;
