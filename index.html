@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="center-container">
+      <div class="login-container" data-augmented-ui>
+        <div  class="input-aug" data-augmented-ui>
+          <input type="text" id="username" placeholder="Handle">    
+        </div>
+        <div class="input-aug" data-augmented-ui>
+          <input type="password" id="password" placeholder="Password" >
+        </div>
+        <button class="button-aug" id="login" data-augmented-ui>Login</button>
+      </div>
+    </div>
+    <script>
+      
+      let users = [
+          { username: "Burnout", password: "Johnny" },
+          { username: "Grease", password: "Arasaka" },
+          { username: "Torch", password: "Militech"},
+      ];
+
+
+      document.getElementById("login").onclick = ()=> {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        users.forEach((user) => {
+          if (username === user.username && password === user.password) {
+            window.location.href = './mission.html';
+          }
+        })
+      }
+    </script>
+  </body>
+</html>
